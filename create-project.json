@@ -1,0 +1,92 @@
+{
+    "name": "ecr-sample",
+    "description": "",
+    "source": {
+        "type": "GITHUB",
+        "location": "https://github.com/HsiehShuJeng/codebuild-ecr-sample.git",
+        "gitCloneDepth": 50,
+        "gitSubmodulesConfig": {
+            "fetchSubmodules": true
+        },
+        "buildspec": "",
+        "auth": {
+            "type": "OAUTH",
+            "resource": ""
+        },
+        "reportBuildStatus": true,
+        "insecureSsl": true,
+        "sourceIdentifier": ""
+    },
+    "sourceVersion": "",
+    "artifacts": {
+        "type": "CODEPIPELINE",
+        "location": "",
+        "path": "",
+        "namespaceType": "NONE",
+        "name": "",
+        "packaging": "ZIP",
+        "overrideArtifactName": true,
+        "encryptionDisabled": true,
+        "artifactIdentifier": ""
+    },
+    "cache": {
+        "type": "LOCAL",
+        "location": "",
+        "modes": [
+            "LOCAL_DOCKER_LAYER_CACHE"
+        ]
+    },
+    "environment": {
+        "type": "LINUX_CONTAINER",
+        "image": "aws/codebuild/standard:2.0",
+        "computeType": "BUILD_GENERAL1_SMALL",
+        "environmentVariables": [
+            {
+                "name": "",
+                "value": "",
+                "type": "PARAMETER_STORE"
+            }
+        ],
+        "privilegedMode": true,
+        "certificate": "",
+        "registryCredential": {
+            "credential": "",
+            "credentialProvider": "SECRETS_MANAGER"
+        },
+        "imagePullCredentialsType": "SERVICE_ROLE"
+    },
+    "serviceRole": "arn:aws:iam::630778274080:role/service-role/codebuild-codebuild-demo-project-service-role",
+    "timeoutInMinutes": 0,
+    "queuedTimeoutInMinutes": 0,
+    "encryptionKey": "",
+    "tags": [
+        {
+            "key": "",
+            "value": ""
+        }
+    ],
+    "vpcConfig": {
+        "vpcId": "vpc-458f2020",
+        "subnets": [
+            "subnet-a4bfe38c",
+	    "subnet-278b3050",
+            "subnet-3571a36c"
+        ],
+        "securityGroupIds": [
+            "sg-17b0c672"
+        ]
+    },
+    "badgeEnabled": true,
+    "logsConfig": {
+        "cloudWatchLogs": {
+            "status": "ENABLED",
+            "groupName": "",
+            "streamName": ""
+        },
+        "s3Logs": {
+            "status": "ENABLED",
+            "location": "",
+            "encryptionDisabled": true
+        }
+    }
+}
